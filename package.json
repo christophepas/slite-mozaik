@@ -1,0 +1,21 @@
+{
+  "name": "slite-mozaik",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "image-to-ascii": "^3.0.7",
+    "img-to-svg": "^1.0.7",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-dropzone": "^3.13.3",
+    "react-scripts": "1.0.10",
+    "recompose": "^0.23.5",
+    "svg2png": "^4.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

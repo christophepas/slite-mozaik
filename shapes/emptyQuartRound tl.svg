@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45.1 (43504) - http://www.bohemiancoding.com/sketch -->
+    <title>emptyQuartRound tl</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="slide" transform="translate(-550.000000, -129.000000)" fill="#00E9C2">
+            <path d="M550,129 L614,129 L614,193 C578.653776,193 550,164.346224 550,129 L550,129 Z M578,129 L614,129 L614,165 C594.117749,165 578,148.882251 578,129 L578,129 Z" id="emptyQuartRound-tl" transform="translate(582.000000, 161.000000) scale(-1, 1) translate(-582.000000, -161.000000) "></path>
+        </g>
+    </g>
+</svg>
