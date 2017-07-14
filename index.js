@@ -3,8 +3,8 @@
 const ul = require("ul")
 const fs = require("fs")
 const imageToAscii = require("image-to-ascii")
-const svg2png = require("svg2png")
-const { shape1, shape2 } = require('./shape')
+// const svg2png = require("svg2png")
+const { shape1 } = require('./shape')
 
 const imgToSvg = (path, opts, options, cb) => {
     if (typeof opts === "function") {
@@ -35,9 +35,8 @@ const imgToSvg = (path, opts, options, cb) => {
             row.map((pixel, x) => {
                 console.log(pixel);
                 return `<rect x="${x * outerSize}" y="${y * outerSize}" width="${opts.pxSize}" height="${opts.pxSize}" fill="rgb(${pixel.r}, ${pixel.g}, ${pixel.b})"></rect>`
-                const shapeFunc = shape1 //find random
-                const innerShape = shapeFunc(`rgba(${pixel.r}, ${pixel.g}, ${pixel.b})`)
-                const shape = `<rect x="${x * outerSize}" y="${y * outerSize}" width="${opts.pxSize}" height="${opts.pxSize}">${innerShape}</rect>`
+                const innerShape = shape1
+                const shape = `<rect x="${x * outerSize}" y="${y * outerSize}" width="${opts.pxSize}" height="${opts.pxSize}" fill="rgb(${pixel.r}, ${pixel.g}, ${pixel.b})">${innerShape}</rect>`
                 return shape
               }
             ).join("\n")
@@ -54,9 +53,9 @@ const imgToSvg = (path, opts, options, cb) => {
 
 imgToSvg("https://cdn4.iconfinder.com/data/icons/proglyphs-free/512/Invader_3-24.png", (err, out) => {
     // console.log(err || out);
-    fs.writeFileSync('lol.svg', out)
+    fs.writeFileSync('toprocess.svg', out)
 
-    const svg = fs.readFileSync("lol.svg")
-    const png = svg2png(svg)
-    fs.writeFileSync('lol.png', png)
+    // const svg = fs.readFileSync("toprocess.svg")
+    // const png = svg2png(svg)
+    // fs.writeFileSync('toprocess.png', png)
 });
