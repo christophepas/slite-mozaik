@@ -3,7 +3,10 @@
 const sharp = require("sharp")
 const ul = require("ul")
 const fs = require("fs")
+const gm = require("gm")
+const phantomFs = require("pn/fs");
 const imageToAscii = require("image-to-ascii")
+const svg2png = require("svg2png");
 var DeltaE = require('delta-e')
 var colorSpace = require('color-space')
 const { shapes, doubleShapes } = require('./shape')
@@ -93,10 +96,6 @@ const imgToSvg = (path, cb) => {
       }).join("")
     }).join("")
     const options = {
-      size: {
-        width: 50, //WARNING : MULTIPLIED BY THE PIWEL SIZE
-        height: 50,
-      },
       size_options: {
         px_size: {
           width: 1
@@ -114,5 +113,11 @@ const imgToSvg = (path, cb) => {
 // Actual call to the function
 imgToSvg("input.png", (err, out) => {
   fs.writeFileSync('output.svg', out)
-  console.log(err || 'success');
+  console.log(err || 'success')
+  // convert to png
+  phantomFs.readFile("output.svg")
+      .then(svg2png)
+      .then(buffer => phantomFs.writeFile("output.png", buffer))
+      .catch(e => console.error(e));
+
 });
