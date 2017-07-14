@@ -73,6 +73,8 @@ const imgToSvg = (path, cb) => {
         const color = pixel.a === 0 ? [255, 255, 255] : randomColor()
 
         // Double
+        pixels[y] = pixels[y] || {}
+        pixels[y + 1] = pixels[y + 1] || {}
         const rightPx = pixels[y][x + 1]
         const bottomPx = pixels[y + 1][x]
         const opposedPx = pixels[y + 1][x + 1]
