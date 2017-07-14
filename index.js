@@ -6,7 +6,7 @@ const fs = require("fs")
 const imageToAscii = require("image-to-ascii")
 var DeltaE = require('delta-e')
 var colorSpace = require('color-space')
-const { shapes } = require('./shape')
+const { shapes, doubleShapes } = require('./shape')
 
 const colors = [
   [ 90, 211, 220 ],
