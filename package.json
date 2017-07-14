@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "color-space": "^1.14.7",
+    "delta-e": "^0.0.7",
     "image-to-ascii": "^3.0.7",
     "img-to-svg": "^1.0.7",
     "react": "^15.6.1",
