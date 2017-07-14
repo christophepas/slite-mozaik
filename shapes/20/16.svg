@@ -6,7 +6,7 @@
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="16" fill-rule="nonzero" fill="#FFA6A6">
-            <circle id="round" cx="10" cy="10" r="5"></circle>
+            <circle id="round" cx="10" cy="10" r="10"></circle>
         </g>
     </g>
 </svg>

@@ -48,7 +48,7 @@ const shape15 = (x, y, width, height, color) =>
   `<svg x=${x} y=${y} width=${width} height=${height} viewBox="0 0 10 10"><g fill="${color}"><path d="M5,0 C7.76142375,0 10,2.23857625 10,5 C10,7.76142375 7.76142375,10 5,10 C2.23857625,10 0,7.76142375 0,5 C0,2.23857625 2.23857625,0 5,0 Z M5,2.5 C3.61928812,2.5 2.5,3.61928812 2.5,5 C2.5,6.38071188 3.61928812,7.5 5,7.5 C6.38071188,7.5 7.5,6.38071188 7.5,5 C7.5,3.61928812 6.38071188,2.5 5,2.5 Z" id="emptyround"></path></g></svg>`
 
 const shape16 = (x, y, width, height, color) =>
-`<svg x=${x} y=${y} width=${width} height=${height} viewBox="0 0 10 10"><g fill="${color}"><circle id="round" cx="5" cy="5" r="2.5"></circle></g></svg>`
+`<svg x=${x} y=${y} width=${width} height=${height} viewBox="0 0 10 10"><g fill="${color}"><circle id="round" cx="5" cy="5" r="5"></circle></g></svg>`
 
 module.exports.shapes = [shape1, shape2, shape3, shape4, shape5, shape6, shape7, shape8, shape9, shape10, shape11, shape12, shape13, shape14, shape15, shape16]
 
@@ -102,7 +102,7 @@ const doubleShape15 = (x, y, width, height, color) =>
   `<svg x=${x} y=${y} width=${width} height=${height} viewBox="0 0 20 20"><g fill="${color}"><path d="M10,0 C15.5228475,0 20,4.4771525 20,10 C20,15.5228475 15.5228475,20 10,20 C4.4771525,20 0,15.5228475 0,10 C0,4.4771525 4.4771525,0 10,0 Z M10,5 C7.23857625,5 5,7.23857625 5,10 C5,12.7614238 7.23857625,15 10,15 C12.7614238,15 15,12.7614238 15,10 C15,7.23857625 12.7614238,5 10,5 Z" id="emptyround"></path></g></svg>`
 
 const doubleShape16 = (x, y, width, height, color) =>
-`<svg x=${x} y=${y} width=${width} height=${height} viewBox="0 0 20 20"><g fill="${color}"><circle id="round" cx="10" cy="10" r="5"></circle></g></svg>`
+`<svg x=${x} y=${y} width=${width} height=${height} viewBox="0 0 20 20"><g fill="${color}"><circle id="round" cx="10" cy="10" r="10"></circle></g></svg>`
 
 
 
