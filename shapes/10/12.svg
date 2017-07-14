@@ -5,10 +5,8 @@
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="12" fill="#00E9C2" fill-rule="nonzero">
-            <g id="square">
-                <polygon points="0 0 10 0 10 10 0 10"></polygon>
-            </g>
+        <g id="12" fill="#FFB798">
+            <path d="M10,10 C9.97329712,4.99216261 6.03286743,0.0369045371 0.0115749473,0.0115749473 L-2.94209102e-15,5.01157495 C2.70874023,5.00578747 5,7.10416528 5.00578747,10 L10,10 Z" id="Path"></path>
         </g>
     </g>
 </svg>

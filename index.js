@@ -1,5 +1,6 @@
 "use strict";
 
+const sharp = require("sharp")
 const ul = require("ul")
 const fs = require("fs")
 const imageToAscii = require("image-to-ascii")
@@ -35,43 +36,48 @@ const closestToColor = (baseColor) => {
       maxScore = score
     }
   })
-
   return finalColor
 }
 
+const randomColor = () => colors[Math.floor(Math.random()*colors.length)];
+
 const imgToSvg = (path, cb) => {
-
-    const pxSize = 1
+    const pxSize = 10
     let outerSize = pxSize
-
     const stringify_fn = pixels => pixels.map((row, y) => {
       return row.map((pixel, x) => {
         // Random shape
         const shape = shapes[Math.floor(Math.random()*shapes.length)];
-        const baseColor = [ pixel.r, pixel.g, pixel.b ]
-        const color = pixel.a === 0 ? [255, 255, 255] : closestToColor(baseColor)
+        // Closest color
+        // const baseColor = [ pixel.r, pixel.g, pixel.b ]
+        // const color = pixel.a === 0 ? [255, 255, 255] : closestToColor(baseColor)
+        // Random color
+        const color = pixel.a === 0 ? [255, 255, 255] : randomColor()
+
         return shape(x * outerSize, y * outerSize, pxSize, pxSize, `rgb(${color[0]}, ${color[1]}, ${color[2]})`)
       }).join("")
     }).join("")
-
-
     const options = {
+      size: {
+        width: 50, //WARNING : MULTIPLIED BY THE PIWEL SIZE
+        height: 50,
+      },
       size_options: {
         px_size: {
           width: 1
-        }
+        },
       },
       stringify_fn,
     }
-
     imageToAscii(path, options, (err, converted, raw, img) => {
         if (err) { return cb(err); }
         // console.log(converted)
         cb(null, `<svg width="${img[0].length * outerSize}" height="${img.length * outerSize}">${converted}</svg>`);
     });
-};
+}
 
-imgToSvg("toprocess.png", (err, out) => {
-  fs.writeFileSync('result.svg', out)
+// Actual call to the function
+imgToSvg("input.png", (err, out) => {
+  fs.writeFileSync('output.svg', out)
   console.log(err || 'success');
 });
